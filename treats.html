@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Sweets - Angels Tasty Sweets</title>
+  <style>
+    /* Base & Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      color: #3a2c29; /* dark chocolate brown */
+    }
+    body {
+      background: #fff0f6; /* very light pink */
+      line-height: 1.6;
+      font-size: 16px;
+      scroll-behavior: smooth;
+    }
+    a {
+      color: #b8860b; /* goldenrod */
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #ffd700; /* gold */
+    }
+    /* Container */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    /* Header */
+    header {
+      padding: 1.5rem 0;
+      border-bottom: 1px solid #f8d7da;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #ffe6f0; /* soft pink */
+      box-shadow: 0 2px 6px rgba(184, 134, 11, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header h1 {
+      font-weight: 800;
+      font-size: 1.8rem;
+      color: #b8860b; /* goldenrod */
+      letter-spacing: 0.06em;
+      font-family: "Georgia", serif;
+      text-shadow: 1px 1px 2px #fcd5d8;
+    }
+    nav a {
+      margin-left: 2rem;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    /* Page Title */
+    .page-title {
+      text-align: center;
+      margin: 3rem 0 2rem 0;
+      font-family: "Georgia", serif;
+      font-size: 2.8rem;
+      font-weight: 900;
+      color: #b8860b;
+      text-shadow: 0 1px 2px #ffc0cb;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .page-title.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* Product Grid */
+    .product-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2.5rem;
+      margin-bottom: 4rem;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease 0.2s, transform 0.8s ease 0.2s;
+    }
+    .product-list.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .product {
+      background: #fff0f6;
+      border-radius: 24px;
+      padding: 1.5rem;
+      box-shadow: 0 8px 20px rgba(184, 134, 11, 0.15);
+      transition: box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .product:hover {
+      box-shadow: 0 16px 36px rgba(184, 134, 11, 0.3);
+    }
+    .product img {
+      width: 100%;
+      border-radius: 20px;
+      margin-bottom: 1rem;
+      box-shadow: 0 6px 14px rgba(255, 102, 179, 0.3);
+      transition: transform 0.3s ease;
+    }
+    .product:hover img {
+      transform: scale(1.05);
+    }
+    .product h4 {
+      font-weight: 700;
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      color: #5a3e36;
+      font-family: "Georgia", serif;
+    }
+    .product p {
+      font-size: 1rem;
+      color: #7f5a40;
+      line-height: 1.4;
+    }
+    /* Footer */
+    footer {
+      margin-top: 4rem;
+      padding: 2rem 0;
+      border-top: 1px solid #f8d7da;
+      text-align: center;
+      color: #b8860b;
+      font-size: 0.9rem;
+      font-family: "Georgia", serif;
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      nav a {
+        margin-left: 0;
+        margin-right: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="container" aria-label="Main navigation">
+    <h1>Angels Tasty Sweets</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="our-sweets.html" aria-current="page">Our Sweets</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2 class="page-title">Our Delicious Sweets</h2>
+
+    <section class="product-list">
+      <article class="product" tabindex="0">
+        <img src="https://www.allrecipes.com/thmb/Dhb0atrypaWX3v2io2DyAACE6sQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/8201-strawberry-shortcake-ddmfs-5777-hero-1x2-1-0bde2ca6dd554b77b3ef5362b2b43a05.jpg" alt="Strawberry Shortcake" />
+        <h4>Strawberry Shortcake</h4>
+        <p>Fluffy vanilla cake layered with fresh strawberries and whipped cream.</p>
+      </article>
+
+      <article class="product" tabindex="0">
+        <img src="https://www.abakingjourney.com/wp-content/uploads/2021/04/Lemon-Curd-Tartlets-Feature-480x270.jpg" alt="Lemon Tarts" />
+        <h4>Lemon Tarts</h4>
+        <p>Tart lemon custard in a buttery crust topped with a light meringue.</p>
+      </article>
+
+      <article class="product" tabindex="0">
+        <img src="https://thescranline.com/wp-content/uploads/2023/06/RED-VELVET-CAKE-23-S-01.jpg" alt="Red Velvet Cake" />
+        <h4>Red Velvet Cake</h4>
+        <p>Classic red velvet cake with cream cheese frosting and a hint of cocoa.</p>
+      </article>
+
+      <article class="product" tabindex="0">
+        <img src="https://www.mollyjwilk.com/wp-content/uploads/2024/01/French-Macarons-_-MollyJWilk-856x1024.jpg" alt="Macarons" />
+        <h4>French Macarons</h4>
+        <p>Delicate almond meringue cookies in assorted pastel flavors.</p>
+      </article>
+
+      <article class="product" tabindex="0">
+        <img src="https://www.tasteofhome.com/wp-content/uploads/2018/01/Vanilla-Bean-Cupcakes_EXPS_BW20_53092_B10_03_15b-1.jpg" alt="Cupcakes" />
+        <h4>Vanilla Bean Cupcakes</h4>
+        <p>Light and fluffy cupcakes infused with real vanilla bean and topped with buttercream.</p>
+      </article>
+
+      <article class="product" tabindex="0">
+        <img src="https://i.pinimg.com/564x/db/81/ac/db81ac1cff2a933dbb1db7a5c2705b1f.jpg" alt="Chocolate Ganache Tart" />
+        <h4>Chocolate Heaven Cake</h4>
+        <p>Rich, moist chocolate cake topped with creamy ganache and fresh berries.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Angels Tasty Sweets. All rights reserved.
+  </footer>
+
+  <script>
+    // Scroll animation - fade + slide up
+    function revealOnScroll() {
+      const titles = document.querySelectorAll('.page-title, .product-list');
+      const windowBottom = window.innerHeight;
+
+      titles.forEach(el => {
+        const elTop = el.getBoundingClientRect().top;
+
+        if (elTop < windowBottom - 100) {
+          el.classList.add('visible');
+        }
+      });
+    }
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  </script>
+</body>
+</html>
